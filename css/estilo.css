@@ -1,0 +1,137 @@
+.bgcolor{
+    background-color: cornflowerblue;
+    font-size: 20px;
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+.margen{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+h1{
+    font-family:"comic sans ms";
+}
+main div p {
+    text-align: center;
+}
+main div h1{
+    text-align: center;
+}
+main div p{
+    text-align: left;
+    line-height: 2 ;
+}
+.texto{
+    text-align: center;   
+}
+a{
+    text-decoration: none;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+.fondo{
+    background-image: url(../asses/img/mariposas.png);
+    grid-area: encabezado;
+}
+li{list-style-type: none;padding: 10px;}
+a{text-decoration: none;}
+.p-50{padding: 50px;}
+.padT-20{padding-top: 20px;}
+.padB-20{padding-bottom: 20px;}
+.m-50{margin: 50px;}
+.bgPrimario{background-color: cornflowerblue;}
+h1{font-size: 2rem;}
+.gridIndex{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+}
+header {grid-area: header;}
+main {grid-area: main;}
+footer{grid-area: footer;}
+header,ul,footer{display: flex;}
+.gridIndex footer{justify-content: space-around;}
+/*MEDIA QUERIES MOBILE*/
+@media only screen and (max-width: 768px)
+{.gridIndex{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+}		
+}
+table tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+table th{
+    display: flex;
+    flex-direction: column;
+    border: 1px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+/*MEDIA QUERIES DESKTOP*/
+@media only screen and (min-width: 1024px)
+.transition{
+	width: 400px;
+	transition: all 1s;
+}
+.transition:hover{
+	width: 400px;
+	cursor: pointer;
+	background-color: blueviolet;
+	font-size: 100px;
+}
+h1{
+	color: rgb(253, 237, 9);
+	padding: 10px;
+	transition: color 5s, padding 1s;
+}
+@keyframes desaparecer{
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+.animation{
+	animation-name: desaparecer;
+	animation-iteration-count: 2;
+	animation-duration: 3s;
+	animation-delay: 5s;
+}
+@keyframes movimiento{
+	0%{transform: translateX(100px);}
+	25%{transform: skew(60deg,60deg);}
+	50%{transform: rotate(45deg);}
+	75%{transform: translate(100px, 100px);}
+	100%{transform: scale(2,2);}
+}
+.animacionImg{
+	animation-name: movimiento;
+	animation-iteration-count: 1;
+	animation-timing-function:ease-in-out;
+	animation-duration: 10s;
+	animation-delay: 5s;
+}
+
